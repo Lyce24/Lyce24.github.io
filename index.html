@@ -1,58 +1,87 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Yancheng(Eriksen) Liu</title>
-    <style>
-      /* Add some styling to make the website look nicer */
-      body {
-        font-family: Arial, sans-serif;
-        text-align: center;
-        background-color: #f2f2f2;
-      }
-
-      h1 {
-        font-size: 36px;
-        margin-top: 50px;
-        color: #333;
-      }
-
-      p {
-        font-size: 18px;
-        margin-top: 20px;
-        color: #555;
-        line-height: 1.5;
-      }
-
-      .container {
-        max-width: 800px;
-        margin: 0 auto;
-        text-align: left;
-        padding: 50px;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <h1>Yancheng(Eriksen) Liu</h1>
-      <p>
-        I'm a junior at Reed College majoring in Mathematics and Computer Science w/ Econ minor. My specialty fields include Abstract Algebra, Topology, Computer System, Algorithm Design, OOP, Computability and Complexity Analysis, Software Engineering, and Operating System, Financial Indicator Analysis. My main programming languages are Python, C++, and Java. I'm looking for internships related to Quant Trading, Software Engineering, Full-Stack Engineering, and Embedded System design.
-      </p>
-      <h2>Skills</h2>
-      <ul>
-        <li>Python</li>
-        <li>C++</li>
-        <li>Rust</li>
-      </ul>
-      <h2>Projects</h2>
-      <ul>
-        <li><a href="#">Project 1</a></li>
-        <li><a href="#">Project 2</a></li>
-        <li><a href="#">Project 3</a></li>
-      </ul>
-      <h2>Contact</h2>
-      <p>
-        If you'd like to get in touch with me, you can email me at <a href="liue@reed.edu">liue@reed.edu</a>
-      </p>
-    </div>
-  </body>
+<head>
+  <title>Low Code Environment</title>
+  <script src="https://blockly-demo.appspot.com/static/blockly_compressed.js"></script>
+  <script src="https://blockly-demo.appspot.com/static/blocks_compressed.js"></script>
+  <script src="https://blockly-demo.appspot.com/static/javascript_compressed.js"></script>
+  <script src="https://blockly-demo.appspot.com/static/python_compressed.js"></script>
+  <style>
+    html, body {
+      height: 100%;
+    }
+    .blocklySvg {
+      height: calc(100% - 35px);
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <h1>Low Code Environment</h1>
+  <div id="blocklyDiv" class="blocklySvg"></div>
+  <xml id="toolbox" style="display: none">
+    <block type="controls_forEach">
+      <field name="VAR">i</field>
+      <value name="FROM">
+        <shadow type="math_number">
+          <field name="NUM">1</field>
+        </shadow>
+      </value>
+      <value name="TO">
+        <shadow type="math_number">
+          <field name="NUM">10</field>
+        </shadow>
+      </value>
+      <statement name="DO">
+        <block type="text_print">
+          <value name="TEXT">
+            <shadow type="text">
+              <field name="TEXT">Hello, World!</field>
+            </shadow>
+          </value>
+        </block>
+      </statement>
+    </block>
+    <block type="controls_if">
+      <value name="IF0">
+        <block type="logic_compare">
+          <field name="OP">EQ</field>
+          <value name="A">
+            <block type="math_number">
+              <field name="NUM">0</field>
+            </block>
+          </value>
+          <value name="B">
+            <block type="math_number">
+              <field name="NUM">0</field>
+            </block>
+          </value>
+        </block>
+      </value>
+      <statement name="DO0">
+        <block type="text_print">
+          <value name="TEXT">
+            <shadow type="text">
+              <field name="TEXT">Zero</field>
+            </shadow>
+          </value>
+        </block>
+      </statement>
+      <statement name="ELSE">
+        <block type="text_print">
+          <value name="TEXT">
+            <shadow type="text">
+              <field name="TEXT">Non-zero</field>
+            </shadow>
+          </value>
+        </block>
+      </statement>
+    </block>
+  </xml>
+  <script>
+    var workspace = Blockly.inject('blocklyDiv', {
+      toolbox: document.getElementById('toolbox')
+    });
+  </script>
+</body>
 </html>
