@@ -1,87 +1,118 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Low Code Environment</title>
-  <script src="https://blockly-demo.appspot.com/static/blockly_compressed.js"></script>
-  <script src="https://blockly-demo.appspot.com/static/blocks_compressed.js"></script>
-  <script src="https://blockly-demo.appspot.com/static/javascript_compressed.js"></script>
-  <script src="https://blockly-demo.appspot.com/static/python_compressed.js"></script>
-  <style>
-    html, body {
-      height: 100%;
-    }
-    .blocklySvg {
-      height: calc(100% - 35px);
-      width: 100%;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eriksen Liu - Academic and Project Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        header {
+            background: #007acc;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        header p {
+            margin: 0.5rem 0 0;
+            font-size: 1.2rem;
+        }
+        nav {
+            background: #005a99;
+            padding: 0.5rem;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-size: 1rem;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            padding: 2rem;
+        }
+        .section {
+            margin-bottom: 2rem;
+        }
+        .section h2 {
+            margin-top: 0;
+            border-bottom: 2px solid #007acc;
+            padding-bottom: 0.5rem;
+        }
+        footer {
+            background: #f4f4f4;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+            border-top: 1px solid #ddd;
+        }
+        footer a {
+            color: #007acc;
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
-  <h1>Low Code Environment</h1>
-  <div id="blocklyDiv" class="blocklySvg"></div>
-  <xml id="toolbox" style="display: none">
-    <block type="controls_forEach">
-      <field name="VAR">i</field>
-      <value name="FROM">
-        <shadow type="math_number">
-          <field name="NUM">1</field>
-        </shadow>
-      </value>
-      <value name="TO">
-        <shadow type="math_number">
-          <field name="NUM">10</field>
-        </shadow>
-      </value>
-      <statement name="DO">
-        <block type="text_print">
-          <value name="TEXT">
-            <shadow type="text">
-              <field name="TEXT">Hello, World!</field>
-            </shadow>
-          </value>
-        </block>
-      </statement>
-    </block>
-    <block type="controls_if">
-      <value name="IF0">
-        <block type="logic_compare">
-          <field name="OP">EQ</field>
-          <value name="A">
-            <block type="math_number">
-              <field name="NUM">0</field>
-            </block>
-          </value>
-          <value name="B">
-            <block type="math_number">
-              <field name="NUM">0</field>
-            </block>
-          </value>
-        </block>
-      </value>
-      <statement name="DO0">
-        <block type="text_print">
-          <value name="TEXT">
-            <shadow type="text">
-              <field name="TEXT">Zero</field>
-            </shadow>
-          </value>
-        </block>
-      </statement>
-      <statement name="ELSE">
-        <block type="text_print">
-          <value name="TEXT">
-            <shadow type="text">
-              <field name="TEXT">Non-zero</field>
-            </shadow>
-          </value>
-        </block>
-      </statement>
-    </block>
-  </xml>
-  <script>
-    var workspace = Blockly.inject('blocklyDiv', {
-      toolbox: document.getElementById('toolbox')
-    });
-  </script>
+    <header>
+        <h1>Eriksen Liu</h1>
+        <p>Graduate Student | Researcher | Developer</p>
+    </header>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#awards">Awards</a>
+    </nav>
+
+    <div class="container">
+        <section id="about" class="section">
+            <h2>About Me</h2>
+            <p>Hi, I'm Eriksen Liu, a graduate student at Brown University with a strong background in Mathematics, Computer Science, and Economics from Reed College. My academic journey is fueled by my passion for research, problem-solving, and exploring innovative ideas in computational fields.</p>
+        </section>
+
+        <section id="experience" class="section">
+            <h2>Experience</h2>
+            <ul>
+                <li><strong>Teaching Assistant (CS Department, Reed College)</strong> <br> Supported courses like CS1/CS2, Data Structures, Algorithm Design, and Complexity Analysis by grading and holding office hours.</li>
+                <li><strong>Teaching Assistant (Math Department, Reed College)</strong> <br> Assisted in Vector Calculus and Abstract Algebra courses, focusing on formal proofs and mathematical problem-solving.</li>
+                <li><strong>Research Experience</strong> <br> Worked on projects including CIFAR classification with CNNs and nutritional fact prediction using GNN and multimodal frameworks.</li>
+            </ul>
+        </section>
+
+        <section id="projects" class="section">
+            <h2>Projects</h2>
+            <ul>
+                <li><strong>Nutrition Prediction from Images</strong> <br> Designed a GNN-based multimodal attention network to estimate nutritional values from food images. <a href="https://github.com/Lyce24/DL_Final_Project">View on GitHub</a></li>
+                <li><strong>In-Context Learning for Caption Generation</strong> <br> Developed a Socratic method framework for generating captions with the Flickr8k dataset.</li>
+                <li><strong>Protein Interaction Network Analysis</strong> <br> Utilized random walk algorithms to identify protein-protein interactions in flies, leading to SIGCSE recognition.</li>
+            </ul>
+        </section>
+
+        <section id="awards" class="section">
+            <h2>Awards and Recognitions</h2>
+            <ul>
+                <li>Second Round at SIGCSE for protein-protein interaction detection research.</li>
+                <li>TA Excellence Award for outstanding support in Reed College's CS and Math departments.</li>
+            </ul>
+        </section>
+    </div>
+
+    <footer>
+        <p>Connect with me on <a href="https://www.linkedin.com/in/yancheng-liu-363689222/">LinkedIn</a> | <a href="https://github.com/Lyce24">GitHub</a></p>
+    </footer>
 </body>
 </html>
